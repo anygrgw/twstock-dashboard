@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 vs 2027 台股十大熱門板塊與產業鏈全景戰情儀表板 | Antigravity Research</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              500: '#10b981',
+              600: '#059669',
+              900: '#064e3b',
+            },
+            cyan: {
+              400: '#22d3ee',
+              500: '#06b6d4',
+              900: '#164e63',
+            },
+            amber: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+            },
+            purple: {
+              400: '#c084fc',
+              500: '#a855f7',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Mermaid.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+    
+    /* Custom Scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090d16;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+
+    /* Glassmorphic Effects */
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(51, 65, 85, 0.4);
+    }
+    .glass-card:hover {
+      border-color: rgba(16, 185, 129, 0.4);
+    }
+    .glass-header {
+      background: rgba(9, 13, 22, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+    }
+    .glow-emerald {
+      box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.25);
+    }
+    .glow-cyan {
+      box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.25);
+    }
+    .glow-purple {
+      box-shadow: 0 0 25px -5px rgba(168, 85, 247, 0.25);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col antialiased selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- ================= TOP HEADER BAR ================= -->
+  <header class="sticky top-0 z-50 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo & Title -->
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 via-teal-500 to-cyan-400 p-0.5 shadow-lg flex items-center justify-center">
+            <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
+              <i data-lucide="trending-up" class="w-5 h-5 text-emerald-400"></i>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">Antigravity 產業智庫</span>
+              <span class="px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded-full font-mono">2026-2027 Pro</span>
+            </div>
+            <p class="text-xs text-slate-400 hidden sm:block">台股十大熱門板塊 • 產業位階 • 費雪估值 • 策略全景戰情室</p>
+          </div>
+        </div>
+
+        <!-- Quick Stats & Actions -->
+        <div class="flex items-center space-x-3">
+          <div class="hidden md:flex items-center space-x-4 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-lg text-xs font-mono">
+            <span class="flex items-center text-slate-400"><i data-lucide="activity" class="w-3.5 h-3.5 mr-1 text-emerald-400"></i> 總市值關注: <strong class="text-slate-200 ml-1">NT$ 48.2 兆</strong></span>
+            <span class="h-3 w-px bg-slate-700"></span>
+            <span class="flex items-center text-slate-400"><i data-lucide="cpu" class="w-3.5 h-3.5 mr-1 text-cyan-400"></i> 台積電 3nm/2nm/A16</span>
+            <span class="h-3 w-px bg-slate-700"></span>
+            <span class="text-emerald-400 font-semibold">● 2026/2027 跨週期研判</span>
+          </div>
+          <button onclick="window.print()" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-slate-200 transition-colors" title="列印或輸出報告">
+            <i data-lucide="printer" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="flex space-x-1 sm:space-x-2 overflow-x-auto py-2 border-t border-slate-800/80 no-scrollbar">
+        <button onclick="switchTab('tab-2026')" id="btn-tab-2026" class="tab-btn active px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all flex items-center space-x-2 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+          <i data-lucide="flame" class="w-4 h-4"></i>
+          <span>2026 當前十大熱門板塊</span>
+          <span class="bg-emerald-500/20 text-emerald-300 text-[10px] px-1.5 py-0.5 rounded font-mono">10</span>
+        </button>
+
+        <button onclick="switchTab('tab-2027')" id="btn-tab-2027" class="tab-btn px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all flex items-center space-x-2 text-slate-400 hover:text-slate-200 hover:bg-slate-800/50">
+          <i data-lucide="sparkles" class="w-4 h-4 text-cyan-400"></i>
+          <span>2027 前瞻十大典範轉移</span>
+          <span class="bg-cyan-500/20 text-cyan-300 text-[10px] px-1.5 py-0.5 rounded font-mono">10</span>
+        </button>
+
+        <button onclick="switchTab('tab-hierarchy')" id="btn-tab-hierarchy" class="tab-btn px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all flex items-center space-x-2 text-slate-400 hover:text-slate-200 hover:bg-slate-800/50">
+          <i data-lucide="git-fork" class="w-4 h-4 text-purple-400"></i>
+          <span>產業鏈位階地圖 (Tier 0~5)</span>
+        </button>
+
+        <button onclick="switchTab('tab-fisher')" id="btn-tab-fisher" class="tab-btn px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all flex items-center space-x-2 text-slate-400 hover:text-slate-200 hover:bg-slate-800/50">
+          <i data-lucide="calculator" class="w-4 h-4 text-amber-400"></i>
+          <span>費雪方程式 & DCF 估值矩陣</span>
+        </button>
+
+        <button onclick="switchTab('tab-stocks')" id="btn-tab-stocks" class="tab-btn px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all flex items-center space-x-2 text-slate-400 hover:text-slate-200 hover:bg-slate-800/50">
+          <i data-lucide="crosshair" class="w-4 h-4 text-emerald-400"></i>
+          <span>焦點個股實戰策略庫 (金像電/創意)</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT CONTAINER ================= -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+    <!-- ================= TAB 1: 2026 當前十大熱門板塊 ================= -->
+    <section id="tab-2026" class="tab-content space-y-6">
+      
+      <!-- Top Banner Summary -->
+      <div class="glass-card rounded-2xl p-6 relative overflow-hidden glow-emerald">
+        <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center space-x-2">
+              <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">2026 當前主旋律</span>
+              <span class="text-xs text-slate-400 font-mono">產能翻倍放量 • AI機櫃全面鋪開 • 液冷滲透率攀頂</span>
+            </div>
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">2026 台股十大熱門科技板塊全景</h1>
+            <p class="text-sm text-slate-300 max-w-3xl leading-relaxed">
+              台積電 CoWoS 產能由每月 4.5 萬片衝刺突破至 8~9 萬片，GB200/B300 及次世代 Rubin 機櫃大舉交付，台灣硬體代工、散熱、高階 PCB/CCL 營收獲利迎來歷史爆發期。
+            </p>
+          </div>
+          
+          <!-- Key Metrics -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3 text-center">
+              <div class="text-xs text-slate-400">板塊平均 CAGR</div>
+              <div class="text-xl font-bold text-emerald-400 font-mono mt-1">+33.5%</div>
+            </div>
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3 text-center">
+              <div class="text-xs text-slate-400">平均本益比區間</div>
+              <div class="text-xl font-bold text-cyan-400 font-mono mt-1">22x ~ 35x</div>
+            </div>
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3 text-center col-span-2 sm:col-span-1">
+              <div class="text-xs text-slate-400">法人首選配置</div>
+              <div class="text-xl font-bold text-amber-400 font-mono mt-1">CoWoS & 水冷</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Filter & Search Bar -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+        <div class="relative w-full sm:w-80">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+          <input type="text" id="search-2026" oninput="filter2026Sectors()" placeholder="搜尋板塊名稱、龍頭股代號、護城河關鍵字..." 
+            class="w-full bg-slate-950 border border-slate-800 rounded-lg pl-9 pr-4 py-2 text-xs sm:text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors">
+        </div>
+
+        <!-- Tag Filters -->
+        <div class="flex items-center space-x-1.5 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 no-scrollbar" id="tag-filters-2026">
+          <button onclick="setFilterCategory2026('all')" class="cat-btn active px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-500 text-slate-950">全部 (10)</button>
+          <button onclick="setFilterCategory2026('semiconductor')" class="cat-btn px-2.5 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700">半導體/封裝</button>
+          <button onclick="setFilterCategory2026('server')" class="cat-btn px-2.5 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700">伺服器/散熱</button>
+          <button onclick="setFilterCategory2026('optics')" class="cat-btn px-2.5 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700">光電/傳輸</button>
+          <button onclick="setFilterCategory2026('infra')" class="cat-btn px-2.5 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700">重電/機器人/衛星</button>
+        </div>
+      </div>
+
+      <!-- Sector Cards Grid -->
+      <div id="grid-2026" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+
+      <!-- 2026 Charts Overview Section -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="glass-card rounded-2xl p-5">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-bold text-slate-200 flex items-center">
+              <i data-lucide="bar-chart-3" class="w-4 h-4 text-emerald-400 mr-2"></i> 2026 各板塊預估營收/獲利 CAGR 分布 (%)
+            </h3>
+            <span class="text-xs text-slate-400 font-mono">單位: %</span>
+          </div>
+          <div class="h-64">
+            <canvas id="chart2026CAGR"></canvas>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-bold text-slate-200 flex items-center">
+              <i data-lucide="pie-chart" class="w-4 h-4 text-cyan-400 mr-2"></i> 2026 法人建議資產配置比重
+            </h3>
+            <span class="text-xs text-slate-400 font-mono">戰略比重 (%)</span>
+          </div>
+          <div class="h-64 flex items-center justify-center">
+            <canvas id="chart2026Allocation"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= TAB 2: 2027 前瞻十大典範轉移 ================= -->
+    <section id="tab-2027" class="tab-content hidden space-y-6">
+      
+      <!-- Top Banner Summary -->
+      <div class="glass-card rounded-2xl p-6 relative overflow-hidden glow-cyan">
+        <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center space-x-2">
+              <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">2027 典範轉移</span>
+              <span class="text-xs text-slate-400 font-mono">架構級創新 • 突破物理極限 • 本益比重新評價 (Re-rating)</span>
+            </div>
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">2027 台股前瞻十大典範轉移全瞻</h1>
+            <p class="text-sm text-slate-300 max-w-3xl leading-relaxed">
+              單純產能擴張邊際效益遞減，市場全面轉向「晶背供電 A16、3.2T CPO 光進銅退、玻璃基板、雙相浸沒冷卻、具身智能機器人與 SMR 微核能供電」。
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3 text-center">
+              <div class="text-xs text-slate-400">最高 CAGR 賽道</div>
+              <div class="text-xl font-bold text-cyan-400 font-mono mt-1">CPO (+85%)</div>
+            </div>
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3 text-center">
+              <div class="text-xs text-slate-400">最高溢價 PE</div>
+              <div class="text-xl font-bold text-purple-400 font-mono mt-1">35x ~ 55x</div>
+            </div>
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3 text-center col-span-2 sm:col-span-1">
+              <div class="text-xs text-slate-400">次世代突破</div>
+              <div class="text-xl font-bold text-amber-400 font-mono mt-1">玻璃基板 & SMR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2026 vs 2027 Paradigm Shift Comparison Table -->
+      <div class="glass-card rounded-2xl p-5 overflow-hidden">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-base font-bold text-slate-100 flex items-center">
+            <i data-lucide="arrow-right-left" class="w-5 h-5 text-cyan-400 mr-2"></i> 2026 ➔ 2027 關鍵技術演進與突破對照表
+          </h3>
+          <span class="text-xs text-slate-400 font-mono">跨週期戰略矩陣</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-900/90 border-b border-slate-800 text-slate-300 font-semibold font-mono">
+                <th class="p-3 w-32">技術領域</th>
+                <th class="p-3 text-emerald-400 bg-emerald-950/20 w-1/4">2026 當前主流型態</th>
+                <th class="p-3 text-cyan-400 bg-cyan-950/20 w-1/4">2027 前瞻典範轉移</th>
+                <th class="p-3">技術瓶頸與催化劑</th>
+                <th class="p-3 text-right">受惠龍頭標的</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-sans" id="tbody-evolution"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 2027 Sector Cards Grid -->
+      <div id="grid-2027" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+
+      <!-- Comparison Chart: 2026 vs 2027 CAGR Boost -->
+      <div class="glass-card rounded-2xl p-5">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-sm font-bold text-slate-200 flex items-center">
+            <i data-lucide="zap" class="w-4 h-4 text-amber-400 mr-2"></i> 2026 vs 2027 核心賽道預估 CAGR 成長爆發力對比
+          </h3>
+          <span class="text-xs text-slate-400 font-mono">CAGR (%)</span>
+        </div>
+        <div class="h-72">
+          <canvas id="chartCAGRComparison"></canvas>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= TAB 3: 產業鏈位階地圖 (Tier 0~5) ================= -->
+    <section id="tab-hierarchy" class="tab-content hidden space-y-6">
+      
+      <!-- Top Banner Summary -->
+      <div class="glass-card rounded-2xl p-6 relative overflow-hidden glow-purple">
+        <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center space-x-2">
+              <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/40">產業價值階層</span>
+              <span class="text-xs text-slate-400 font-mono">Tier 0 (頂層設計) ➔ Tier 5 (能源與實體應用)</span>
+            </div>
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">台股產業鏈上下游位階與利潤池地圖</h1>
+            <p class="text-sm text-slate-300 max-w-3xl leading-relaxed">
+              透過產業鏈 6 大階層解構台股生態系：從極高毛利的矽智財 (IP/ASIC) 與台積電獨家製造，穿透高速光電與液冷關鍵零組件，至 ODM 機櫃整合與重電能源底層。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Smiling Curve Chart -->
+      <div class="glass-card rounded-2xl p-5">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-4">
+          <div>
+            <h3 class="text-base font-bold text-slate-100 flex items-center">
+              <i data-lucide="smile" class="w-5 h-5 text-emerald-400 mr-2"></i> 科技產業鏈「微笑曲線」利潤率與定價權分布 (Smiling Curve)
+            </h3>
+            <p class="text-xs text-slate-400 mt-0.5">左側研發設計 (IP/ASIC) 與晶圓封裝 (TSMC) 佔據最高毛利率；右側能源基建與 AI 機器人享有高定價權；中間組裝代工薄利多銷但營收體量最大。</p>
+          </div>
+          <span class="px-3 py-1 rounded-full text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">毛利率 (%) vs 產業位階</span>
+        </div>
+        <div class="h-64">
+          <canvas id="chartSmilingCurve"></canvas>
+        </div>
+      </div>
+
+      <!-- Tier 0 ~ Tier 5 Breakdown Accordion Cards -->
+      <div class="space-y-4" id="tier-breakdown-container"></div>
+
+      <!-- Dynamic Mermaid Diagram Rendering -->
+      <div class="glass-card rounded-2xl p-6">
+        <h3 class="text-base font-bold text-slate-100 flex items-center mb-4">
+          <i data-lucide="network" class="w-5 h-5 text-cyan-400 mr-2"></i> 產業鏈上下游供需傳導架構全景圖
+        </h3>
+        <div class="mermaid bg-slate-900/90 p-4 rounded-xl border border-slate-800 text-xs overflow-x-auto">
+flowchart LR
+    subgraph T0["Tier 0: 頂層設計 & IP (力旺/世芯/創意)"]
+      IP["純IP授權 & ASIC"]
+    end
+    subgraph T1["Tier 1: 晶圓製造 & 先進封裝 (台積電/弘塑/閎康)"]
+      TSMC["N2/A16 & CoWoS"]
+    end
+    subgraph T2["Tier 2: 光電傳輸 & 記憶體 (聯鈞/光聖/群聯)"]
+      CPO["CPO矽光子 & HBM"]
+    end
+    subgraph T3["Tier 3: 溫控散熱 & 高階PCB (奇鋐/金像電/台光電)"]
+      Cooling["液冷CDU & M8 PCB"]
+    end
+    subgraph T4["Tier 4: 機櫃組裝 ODM (鴻海/廣達/緯穎)"]
+      Rack["GB200/B300 機櫃"]
+    end
+    subgraph T5["Tier 5: 重電電網 & 實體AI (華城/中興電/所羅門)"]
+      Power["變壓器微電網 & 機器人"]
+    end
+
+    T0 -->|交付 RTL/架構| T1
+    T1 -->|CoWoS封裝晶片| T2
+    T2 -->|光電模組整合| T3
+    T3 -->|關鍵零組件總成| T4
+    T4 -->|資料中心部署需大量電網| T5
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= TAB 4: 費雪方程式 & DCF 估值矩陣 ================= -->
+    <section id="tab-fisher" class="tab-content hidden space-y-6">
+      
+      <!-- Top Banner Summary -->
+      <div class="glass-card rounded-2xl p-6 relative overflow-hidden glow-cyan">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center space-x-2">
+              <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40">量化估值模型</span>
+              <span class="text-xs text-slate-400 font-mono">費雪方程式 • 股權久期 (Duration) • 戴維斯雙擊條件</span>
+            </div>
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">費雪方程式與科技股 DCF 敏感度矩陣</h1>
+            <p class="text-sm text-slate-300 max-w-3xl leading-relaxed">
+              拆解外生名目利率 $i_{\text{nominal}} \approx r_{\text{real}} + \pi^e$ 對折現率分母 (WACC) 的拉抬，對比科技成長股超長久期（Duration 35~55年）所面臨的折現考驗，量化企業分子現金流爆發引發「戴維斯雙擊」的嚴格條件。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Formula Breakdown 3-Card Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        
+        <div class="glass-card rounded-xl p-4 space-y-2 border-l-4 border-l-amber-500">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-amber-400 font-semibold">外生分母端</span>
+            <i data-lucide="scale" class="w-4 h-4 text-amber-400"></i>
+          </div>
+          <h4 class="font-bold text-slate-100 text-sm">費雪方程式 (Fisher Eq)</h4>
+          <div class="bg-slate-950/80 p-2.5 rounded font-mono text-xs text-amber-300 border border-slate-800">
+            i<sub>nominal</sub> = (1 + r<sub>real</sub>)(1 + π<sup>e</sup>) - 1<br/>
+            WACC = K<sub>e</sub>(E/V) + K<sub>d</sub>(1-t)(D/V)
+          </div>
+          <p class="text-xs text-slate-400 leading-normal">
+            無風險利率由通膨預期與實質利率決定，推升股權資本成本 $K_e$ 與 WACC（目前約 8.5%~10.5%）。
+          </p>
+        </div>
+
+        <div class="glass-card rounded-xl p-4 space-y-2 border-l-4 border-l-cyan-500">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-cyan-400 font-semibold">敏感度指標</span>
+            <i data-lucide="hourglass" class="w-4 h-4 text-cyan-400"></i>
+          </div>
+          <h4 class="font-bold text-slate-100 text-sm">股權久期 (Equity Duration)</h4>
+          <div class="bg-slate-950/80 p-2.5 rounded font-mono text-xs text-cyan-300 border border-slate-800">
+            D<sub>Equity</sub> ≈ (1 + r) / (r - g)<br/>
+            ΔP/P ≈ - D<sub>mod</sub> × Δr
+          </div>
+          <p class="text-xs text-slate-400 leading-normal">
+            高成長科技股久期長達 35~55 年。若無風險利率上升 100 bps，理論估值面臨 -30%~-50% 折讓懲罰。
+          </p>
+        </div>
+
+        <div class="glass-card rounded-xl p-4 space-y-2 border-l-4 border-l-emerald-500">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-emerald-400 font-semibold">分子爆發條件</span>
+            <i data-lucide="trending-up" class="w-4 h-4 text-emerald-400"></i>
+          </div>
+          <h4 class="font-bold text-slate-100 text-sm">戴維斯雙擊方程式</h4>
+          <div class="bg-slate-950/80 p-2.5 rounded font-mono text-xs text-emerald-300 border border-slate-800">
+            (ΔFCFF / FCFF) >> D<sub>Equity</sub> × Δr<br/>
+            P = EPS ↑↑ × P/E ↑↑ (溢價雙擊)
+          </div>
+          <p class="text-xs text-slate-400 leading-normal">
+            唯有具備定價權（ΔP）與非線性成長（g），使分子暴衝速度遠大於折現率拖累，方能實現雙擊。
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Interactive DCF / Sensitivity Simulator -->
+      <div class="glass-card rounded-2xl p-6 space-y-5">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+          <div>
+            <h3 class="text-base font-bold text-slate-100 flex items-center">
+              <i data-lucide="sliders" class="w-5 h-5 text-amber-400 mr-2"></i> 互動式科技股久期與估值敏感度模擬器
+            </h3>
+            <p class="text-xs text-slate-400 mt-0.5">即時調整折現率 WACC、永續成長率 g 與分子成長預期，觀察股權久期與估值變動。</p>
+          </div>
+          <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/30">即時量化運算中</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          
+          <!-- Controls -->
+          <div class="space-y-4 bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-300">折現率 (WACC / r):</span>
+                <span id="val-r" class="text-amber-400 font-bold">9.5%</span>
+              </div>
+              <input type="range" id="input-r" min="7.0" max="13.0" step="0.25" value="9.5" oninput="calculateDCF()" 
+                class="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-400">
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-300">永續成長率 (g):</span>
+                <span id="val-g" class="text-cyan-400 font-bold">7.0%</span>
+              </div>
+              <input type="range" id="input-g" min="2.0" max="9.0" step="0.25" value="7.0" oninput="calculateDCF()" 
+                class="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400">
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-mono mb-1">
+                <span class="text-slate-300">分子現金流預期增速 (ΔFCFF):</span>
+                <span id="val-g-cf" class="text-emerald-400 font-bold">+45.0%</span>
+              </div>
+              <input type="range" id="input-cf" min="10" max="100" step="5" value="45" oninput="calculateDCF()" 
+                class="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400">
+            </div>
+
+            <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-400">
+              * Gordon 模型限制：r 必須大於 g。本模擬器採動態約束機制避免除以零。
+            </div>
+          </div>
+
+          <!-- Calculated Output -->
+          <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 flex flex-col justify-between">
+              <div class="text-xs text-slate-400">計算所得股權久期 (Macaulay Duration)</div>
+              <div class="text-3xl font-black text-cyan-400 font-mono my-2" id="out-duration">43.8 年</div>
+              <p class="text-xs text-slate-400" id="duration-desc">
+                久期越長，股價對利率（通膨）變動越極端敏感。
+              </p>
+            </div>
+
+            <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 flex flex-col justify-between">
+              <div class="text-xs text-slate-400">利率上升 100 bps 估值折讓衝擊</div>
+              <div class="text-3xl font-black text-rose-400 font-mono my-2" id="out-penalty">-40.0%</div>
+              <p class="text-xs text-slate-400">
+                若無現金流額外增長，分母擴張將造成的理論回檔幅度。
+              </p>
+            </div>
+
+            <div class="sm:col-span-2 bg-slate-900/90 border border-slate-800 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div>
+                <div class="text-xs text-slate-400">分子 vs 分母 賽跑研判結果</div>
+                <div class="text-lg font-bold text-emerald-400 mt-0.5" id="out-verdict">✅ 達成戴維斯雙擊條件 (分子增長覆蓋久期折現)</div>
+              </div>
+              <div class="px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-xs font-mono text-emerald-300">
+                淨超額收益: <strong id="out-excess" class="text-emerald-400">+5.0%</strong>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Duration vs Pricing Power Matrix Table -->
+      <div class="glass-card rounded-2xl p-5 overflow-hidden">
+        <h3 class="text-base font-bold text-slate-100 flex items-center mb-4">
+          <i data-lucide="grid" class="w-5 h-5 text-purple-400 mr-2"></i> 四大科技板塊「久期 vs 定價權」量化對比矩陣
+        </h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-900/90 border-b border-slate-800 text-slate-300 font-semibold font-mono">
+                <th class="p-3">板塊名稱</th>
+                <th class="p-3">代表標的</th>
+                <th class="p-3">股權久期 (Duration)</th>
+                <th class="p-3">定價權等級 (Pricing Power)</th>
+                <th class="p-3">分子抗通膨驅動力</th>
+                <th class="p-3">目標 WACC 建議</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-sans">
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-emerald-300">高階矽智財 (IP)</td>
+                <td class="p-3 font-mono text-slate-300">力旺 (3529)、M31 (6643)</td>
+                <td class="p-3 font-mono text-purple-400 font-bold">50 ~ 60 年 (極長)</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] bg-emerald-500/20 text-emerald-300 font-medium">★★★★★ 壟斷定價</span></td>
+                <td class="p-3 text-slate-300">零邊際成本、按晶圓 ASP 抽成</td>
+                <td class="p-3 font-mono text-slate-400">9.0% ~ 9.5%</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-cyan-300">純 ASIC 設計服務</td>
+                <td class="p-3 font-mono text-slate-300">世芯-KY (3661)、創意 (3443)</td>
+                <td class="p-3 font-mono text-purple-400 font-bold">40 ~ 50 年 (長)</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] bg-cyan-500/20 text-cyan-300 font-medium">★★★★☆ 先進製程專屬</span></td>
+                <td class="p-3 text-slate-300">CSP 自研晶片 NRE 與量產倍增</td>
+                <td class="p-3 font-mono text-slate-400">9.5% ~ 10.2%</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-amber-300">AI 液冷散熱系統</td>
+                <td class="p-3 font-mono text-slate-300">奇鋐 (3017)、雙鴻 (3324)</td>
+                <td class="p-3 font-mono text-purple-400 font-bold">30 ~ 38 年 (中長)</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] bg-amber-500/20 text-amber-300 font-medium">★★★★☆ 規格認證壁壘</span></td>
+                <td class="p-3 text-slate-300">水冷 ASP 為氣冷 5~10 倍</td>
+                <td class="p-3 font-mono text-slate-400">10.0% ~ 10.8%</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-blue-300">先進封裝設備與檢測</td>
+                <td class="p-3 font-mono text-slate-300">弘塑 (3131)、閎康 (3587)</td>
+                <td class="p-3 font-mono text-purple-400 font-bold">28 ~ 35 年 (中等)</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] bg-blue-500/20 text-blue-300 font-medium">★★★★☆ 台積電 Turnkey</span></td>
+                <td class="p-3 text-slate-300">CoWoS/SoIC 機台訂單能見度至2027</td>
+                <td class="p-3 font-mono text-slate-400">9.8% ~ 10.5%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= TAB 5: 焦點個股實戰策略庫 ================= -->
+    <section id="tab-stocks" class="tab-content hidden space-y-6">
+      
+      <!-- Top Banner Summary -->
+      <div class="glass-card rounded-2xl p-6 relative overflow-hidden glow-emerald">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div class="space-y-2">
+            <div class="flex items-center space-x-2">
+              <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">個股實戰策略庫</span>
+              <span class="text-xs text-slate-400 font-mono">斐波那契精算 • 買賣法則 • 三段建倉風控</span>
+            </div>
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">焦點標的：金像電 (2368) & 創意 (3443) 實戰佈局</h1>
+            <p class="text-sm text-slate-300 max-w-3xl leading-relaxed">
+              整合左側黃金口袋 (0.618) 與右側突破 (Breakout) 雙軌策略，嚴格落實 $\text{RRR} \ge 3:1$ 盈虧比與階梯式移動停利。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 1: 金像電 (2368) 斐波那契進場矩陣 -->
+      <div class="glass-card rounded-2xl p-6 space-y-6">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center font-bold text-emerald-400 font-mono">
+              2368
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-slate-100">金像電 (2368.TW) — 伺服器/AI PCB 龍頭</h3>
+              <p class="text-xs text-slate-400">現價基準區間: 985 ~ 1,000 元 | 波段起點 A = 948 元, 前高 B = 1,180 元</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+            首選買點: 0.618 黃金口袋 (980元)
+          </span>
+        </div>
+
+        <!-- 4 Entry Points Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 space-y-3 relative overflow-hidden border-t-2 border-t-emerald-400">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-emerald-400">【買點 A】左側黃金口袋</span>
+              <span class="text-[10px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded font-mono">0.618 Pocket</span>
+            </div>
+            <div class="text-2xl font-black text-slate-100 font-mono">975 ~ 985 <span class="text-xs font-normal text-slate-400">元</span></div>
+            <div class="space-y-1 text-xs text-slate-300">
+              <div class="flex justify-between"><span class="text-slate-400">停損防守 (SL):</span> <strong class="text-rose-400 font-mono">945 元 (-3.57%)</strong></div>
+              <div class="flex justify-between"><span class="text-slate-400">目標 TP1 (1180):</span> <strong class="text-emerald-400 font-mono">RRR = 5.71 : 1</strong></div>
+              <div class="flex justify-between"><span class="text-slate-400">目標 TP2 (1395):</span> <strong class="text-cyan-400 font-mono">RRR = 11.86 : 1</strong></div>
+            </div>
+            <div class="text-[11px] text-slate-400 pt-2 border-t border-slate-800">
+              觸發訊號: 盤中回測 980 元量縮見下影線，5分K底背離翻紅。
+            </div>
+          </div>
+
+          <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 space-y-3 relative overflow-hidden border-t-2 border-t-teal-400">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-teal-400">【買點 B】左側極限低接</span>
+              <span class="text-[10px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded font-mono">0.786 Retrace</span>
+            </div>
+            <div class="text-2xl font-black text-slate-100 font-mono">955 ~ 965 <span class="text-xs font-normal text-slate-400">元</span></div>
+            <div class="space-y-1 text-xs text-slate-300">
+              <div class="flex justify-between"><span class="text-slate-400">停損防守 (SL):</span> <strong class="text-rose-400 font-mono">945 元 (-1.56%)</strong></div>
+              <div class="flex justify-between"><span class="text-slate-400">目標 TP1 (1180):</span> <strong class="text-emerald-400 font-mono">RRR = 14.67 : 1</strong></div>
+              <div class="flex justify-between"><span class="text-slate-400">目標 TP2 (1395):</span> <strong class="text-cyan-400 font-mono">RRR = 29.00 : 1</strong></div>
+            </div>
+            <div class="text-[11px] text-slate-400 pt-2 border-t border-slate-800">
+              觸發訊號: 非理性急跌插針至 960 元迅速收復，爆量長下影。
+            </div>
+          </div>
+
+          <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 space-y-3 relative overflow-hidden border-t-2 border-t-cyan-400">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-cyan-400">【買點 C】右側順勢突破</span>
+              <span class="text-[10px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded font-mono">Breakout</span>
+            </div>
+            <div class="text-2xl font-black text-slate-100 font-mono">1,055 <span class="text-xs font-normal text-slate-400">元</span></div>
+            <div class="space-y-1 text-xs text-slate-300">
+              <div class="flex justify-between"><span class="text-slate-400">停損防守 (SL):</span> <strong class="text-rose-400 font-mono">1,020 元 (-3.32%)</strong></div>
+              <div class="flex justify-between"><span class="text-slate-400">目標 TP1 (1180):</span> <strong class="text-emerald-400 font-mono">RRR = 3.57 : 1</strong></div>
+              <div class="flex justify-between"><span class="text-slate-400">目標 TP2 (1395):</span> <strong class="text-cyan-400 font-mono">RRR = 9.71 : 1</strong></div>
+            </div>
+            <div class="text-[11px] text-slate-400 pt-2 border-t border-slate-800">
+              觸發訊號: 放量逾 2.5 萬張、實體紅 K 站穩 1,054 元頸線。
+            </div>
+          </div>
+
+          <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 space-y-3 relative overflow-hidden border-t-2 border-t-purple-400">
+            <div class="flex justify-between items-center">
+              <span class="text-xs font-bold text-purple-400">【買點 D】突破後回測加碼</span>
+              <span class="text-[10px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded font-mono">Re-test</span>
+            </div>
+            <div class="text-2xl font-black text-slate-100 font-mono">1,035 ~ 1,045 <span class="text-xs font-normal text-slate-400">元</span></div>
+            <div class="space-y-1 text-xs text-slate-300">
+              <div class="flex justify-between"><span class="text-slate-400">停損防守 (SL):</span> <strong class="text-rose-400 font-mono">1,010 元 (-2.88%)</strong></div>
+              <div class="flex justify-between"><span class="text-slate-400">目標 TP1 (1180):</span> <strong class="text-emerald-400 font-mono">RRR = 4.67 : 1</strong></div>
+              <div class="flex justify-between"><span class="text-slate-400">目標 TP2 (1395):</span> <strong class="text-cyan-400 font-mono">RRR = 11.83 : 1</strong></div>
+            </div>
+            <div class="text-[11px] text-slate-400 pt-2 border-t border-slate-800">
+              觸發訊號: 突破頸線後回測 1035~1040 元支撐轉換位量縮不破。
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 3-Stage Position Building & Exit Plan Table -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-900/90 border-b border-slate-800 text-slate-300 font-semibold font-mono">
+                <th class="p-3">建倉階段</th>
+                <th class="p-3">倉位比重</th>
+                <th class="p-3">建議進場價</th>
+                <th class="p-3">階段停損價</th>
+                <th class="p-3">部位均價預估</th>
+                <th class="p-3">停利策略 (Exit Targets)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-sans">
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-emerald-300">第一階段 (底倉)</td>
+                <td class="p-3 font-mono text-emerald-400 font-bold">30%</td>
+                <td class="p-3 font-mono">980 元 (黃金口袋)</td>
+                <td class="p-3 font-mono text-rose-400">945 元 (-3.57%)</td>
+                <td class="p-3 font-mono">980 元</td>
+                <td class="p-3 text-slate-300">TP1: 1,180元 (減碼30% + 移動保本)</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-cyan-300">第二階段 (加碼)</td>
+                <td class="p-3 font-mono text-cyan-400 font-bold">40%</td>
+                <td class="p-3 font-mono">1,055 元 (帶量突破)</td>
+                <td class="p-3 font-mono text-amber-400">上移至 1,010 元</td>
+                <td class="p-3 font-mono">1,023 元</td>
+                <td class="p-3 text-slate-300">TP2: 1,395元 (減碼40% 主升拓展)</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="p-3 font-semibold text-purple-300">第三階段 (奔馳)</td>
+                <td class="p-3 font-mono text-purple-400 font-bold">30%</td>
+                <td class="p-3 font-mono">1,040 元 (回測加碼)</td>
+                <td class="p-3 font-mono text-emerald-400">損益兩平 (1,023元)</td>
+                <td class="p-3 font-mono">1,028 元</td>
+                <td class="p-3 text-slate-300">TP3: 1,510元 (剩餘30% 享受瘋狂延伸)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- Case 2: 創意 (3443) vs 聯發科 (2454) vs 台積電 (2330) 橫向對比 -->
+      <div class="glass-card rounded-2xl p-6 space-y-4">
+        <h3 class="text-base font-bold text-slate-100 flex items-center">
+          <i data-lucide="layers" class="w-5 h-5 text-cyan-400 mr-2"></i> 旗艦權值與高階 ASIC 橫向投資策略比對
+        </h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          
+          <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 space-y-2">
+            <div class="flex justify-between items-center">
+              <span class="text-sm font-bold text-emerald-400">台積電 (2330)</span>
+              <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-mono">Tier 1 霸主</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              **投組核心壓艙石 (35%~45%)**。全球尖端先進製程 (N3/N2/A16) 與 CoWoS/SoIC 獨佔。定價權極高，是抵禦任何通膨與折現率上升的終極資產。
+            </p>
+            <div class="text-[11px] text-slate-400 font-mono">建議策略: 逢回調至季線/半年線無條件定期定額加碼</div>
+          </div>
+
+          <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 space-y-2">
+            <div class="flex justify-between items-center">
+              <span class="text-sm font-bold text-cyan-400">創意 (3443)</span>
+              <span class="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded font-mono">Tier 0 ASIC</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              **高彈性成長動能衛星 (15%~20%)**。台積電 OIP 核心夥伴，受惠 CSP 2nm 自研 ASIC 與 HBM3e/4 介面 IP。高久期但分子具暴衝潛力。
+            </p>
+            <div class="text-[11px] text-slate-400 font-mono">建議策略: 區間箱底佈局，緊盯 NRE 轉量產時程與毛利率</div>
+          </div>
+
+          <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 space-y-2">
+            <div class="flex justify-between items-center">
+              <span class="text-sm font-bold text-amber-400">聯發科 (2454)</span>
+              <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-mono">Tier 0 IC設計</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              **邊緣 AI 與 CSP ASIC 雙引擎 (15%~20%)**。天璣旗艦晶片引領 Edge AI 換機潮，同時攜手輝達進軍車載座艙與客製化 ASIC 雲端方案。
+            </p>
+            <div class="text-[11px] text-slate-400 font-mono">建議策略: 逢除息後貼息或手機淡季逢低承接波段操作</div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-800/80 bg-slate-950/90 py-6 text-xs text-slate-400 text-center font-mono">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div>© 2026 Antigravity 實業 • 產業投資與量化策略研究智庫</div>
+      <div>數據來源：台積電生態系、國際CSP資本支出規劃、券商首席產業調研</div>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Data Store: 2026 Sectors
+    const sectors2026 = [
+      {
+        id: 1,
+        category: 'semiconductor',
+        name: 'CoWoS 先進封裝與設備',
+        stocks: '台積電(2330)、弘塑(3131)、辛耘(3583)、萬潤(6187)',
+        cagr: '38% ~ 50%',
+        cagrNum: 44,
+        moat: '台積電 Turnkey 獨佔優勢，濕製程清洗與高精度點膠壁壘',
+        pe: '25x ~ 38x',
+        sentiment: '超核心重配 (逢拉回必買)',
+        sentimentColor: 'emerald'
+      },
+      {
+        id: 2,
+        category: 'server',
+        name: 'AI 伺服器機櫃與代工',
+        stocks: '鴻海(2317)、廣達(2382)、緯穎(6669)、緯創(3231)',
+        cagr: '30% ~ 45%',
+        cagrNum: 37.5,
+        moat: '機電垂直整合、水冷分流管與電源系統整機交付能力',
+        pe: '15x ~ 22x',
+        sentiment: '外資主力壓艙倉位',
+        sentimentColor: 'cyan'
+      },
+      {
+        id: 3,
+        category: 'server',
+        name: '水冷散熱與 CDU 系統',
+        stocks: '奇鋐(3017)、雙鴻(3324)、高力(8996)、晟銘電(3013)',
+        cagr: '40% ~ 55%',
+        cagrNum: 47.5,
+        moat: 'Cold Plate 水冷板、CDU 與 QD 快接頭 CSP 高階認證門檻',
+        pe: '22x ~ 32x',
+        sentiment: '投信波段強烈追捧',
+        sentimentColor: 'emerald'
+      },
+      {
+        id: 4,
+        category: 'optics',
+        name: '800G / 1.6T 光收發模組',
+        stocks: '聯鈞(3450)、光聖(6442)、華星光(4979)、波若威(3163)',
+        cagr: '35% ~ 50%',
+        cagrNum: 42.5,
+        moat: '矽光子 (SiPh) 封裝與北美一線雲端大廠光學驗證通道',
+        pe: '28x ~ 42x',
+        sentiment: '主動型基金動能首選',
+        sentimentColor: 'purple'
+      },
+      {
+        id: 5,
+        category: 'server',
+        name: '高階銅箔基板 (CCL) 與 PCB',
+        stocks: '台光電(2383)、台燿(6274)、金像電(2368)、健鼎(3044)',
+        cagr: '25% ~ 35%',
+        cagrNum: 30,
+        moat: 'M8/M9 超低損耗 CCL 配方專利與多層厚板高良率壓合',
+        pe: '18x ~ 26x',
+        sentiment: '穩健型長線部位',
+        sentimentColor: 'cyan'
+      },
+      {
+        id: 6,
+        category: 'semiconductor',
+        name: 'ASIC 設計服務與矽智財 (IP)',
+        stocks: '世芯-KY(3661)、創意(3443)、力旺(3529)、智原(3035)',
+        cagr: '30% ~ 40%',
+        cagrNum: 35,
+        moat: '3nm/2nm 先進製程實體設計與 HBM/Die-to-Die 介面 IP 授權',
+        pe: '35x ~ 50x',
+        sentiment: '外資最高溢價持倉',
+        sentimentColor: 'purple'
+      },
+      {
+        id: 7,
+        category: 'infra',
+        name: '重電設備與綠能電網',
+        stocks: '華城(1519)、士電(1503)、中興電(1513)、亞力(1514)',
+        cagr: '22% ~ 30%',
+        cagrNum: 26,
+        moat: '北美變壓器交期 3~4 年、台電強韌電網剛性得標實績',
+        pe: '20x ~ 28x',
+        sentiment: '防禦攻守兼備首選',
+        sentimentColor: 'amber'
+      },
+      {
+        id: 8,
+        category: 'optics',
+        name: '高速傳輸介面 IC / Retimer',
+        stocks: '譜瑞-KY(4966)、祥碩(5269)、信驊(5274)、創惟(6104)',
+        cagr: '25% ~ 35%',
+        cagrNum: 30,
+        moat: 'PCIe 6.0 / USB4 訊號完整性技術與伺服器 BMC 獨佔地位',
+        pe: '28x ~ 40x',
+        sentiment: '高毛利獲利純度股',
+        sentimentColor: 'cyan'
+      },
+      {
+        id: 9,
+        category: 'infra',
+        name: '機器人自動化與智慧視覺',
+        stocks: '所羅門(2359)、和碩(4938)、廣明(6188)、上銀(2049)',
+        cagr: '20% ~ 32%',
+        cagrNum: 26,
+        moat: '3D 空間視覺演算法、協作機器手臂與 AMR 移動底盤市佔',
+        pe: '25x ~ 38x',
+        sentiment: '題材轉機強烈買盤',
+        sentimentColor: 'amber'
+      },
+      {
+        id: 10,
+        category: 'infra',
+        name: '低軌衛星地面接收與元件',
+        stocks: '昇達科(3491)、啟碁(6285)、燿華(2367)、事欣科(4916)',
+        cagr: '25% ~ 38%',
+        cagrNum: 31.5,
+        moat: '毫米波 E-band 元件量產與 SpaceX/Kuiper 供應鏈認證',
+        pe: '20x ~ 30x',
+        sentiment: '衛星直連穩定放量',
+        sentimentColor: 'cyan'
+      }
+    ];
+
+    // Data Store: 2027 Sectors
+    const sectors2027 = [
+      {
+        id: 1,
+        name: 'A16 埃米製程與晶背供電 (BSPDN)',
+        stocks: '台積電(2330)、家登(3680)、中砂(1560)、旺矽(6223)',
+        cagr: '28% ~ 38%',
+        cagrNum: 33,
+        shift: 'Super Power Rail 晶背供電徹底解決 IR Drop 壓降，正面專注訊號走線',
+        pe: '22x ~ 30x',
+        catalyst: 'Apple/NVIDIA/Qualcomm 2027 下半年全面導入 A16 投片'
+      },
+      {
+        id: 2,
+        name: '3.2T CPO 全光共封裝生態系',
+        stocks: '訊芯-KY(6451)、聯鈞(3450)、光聖(6442)、上詮(3363)、波若威(3163)',
+        cagr: '60% ~ 85%',
+        cagrNum: 72.5,
+        shift: '光進銅退終局：光引擎與 ASIC 共同封裝，功耗減半、延遲降低 70%',
+        pe: '35x ~ 55x',
+        catalyst: '1.6T 銅纜抵達物理極限，CSP 雲端大廠全面採購 3.2T CPO 交換機'
+      },
+      {
+        id: 3,
+        name: '玻璃基板 (Glass Substrate) 與 3D SoIC',
+        stocks: '欣興(3037)、景碩(3189)、鈦昇(8027)、弘塑(3131)、台積電(2330)',
+        cagr: '50% ~ 75%',
+        cagrNum: 62.5,
+        shift: 'TGV 玻璃通孔取代有機載板核心層，超高平整度與零翹曲適應超大晶片',
+        pe: '30x ~ 45x',
+        catalyst: 'Intel 率先導入量產，NVIDIA 次世代 GPU 宣布 2027 導入 Glass Core'
+      },
+      {
+        id: 4,
+        name: '雙相浸沒式散熱與微通道冷卻',
+        stocks: '雙鴻(3324)、奇鋐(3017)、高力(8996)、一詮(2486)',
+        cagr: '45% ~ 65%',
+        cagrNum: 55,
+        shift: '單晶片 TDP 突破 1500W~2000W，水冷板熱阻逼近極限，雙相相變冷卻出線',
+        pe: '28x ~ 40x',
+        catalyst: '歐洲與北美對資料中心 PUE 強制要求 < 1.15，高密度機房標配浸沒式'
+      },
+      {
+        id: 5,
+        name: '具身智能機器人 (Embodied AI)',
+        stocks: '鴻海(2317)、和碩(4938)、所羅門(2359)、廣明/達明(6188)、上銀(2049)',
+        cagr: '55% ~ 80%',
+        cagrNum: 67.5,
+        shift: '多模態 VLA 模型驅動人形機器人，六維力矩感測器與靈巧手精密減速機量產',
+        pe: '35x ~ 50x',
+        catalyst: 'Tesla Optimus 3 與各大科技巨頭人形機器人產線萬台級實體部署'
+      },
+      {
+        id: 6,
+        name: '2nm / Sub-2nm 客製化 ASIC 爆發潮',
+        stocks: '世芯-KY(3661)、創意(3443)、巨有科技(8227)、神盾(6462)',
+        cagr: '35% ~ 48%',
+        cagrNum: 41.5,
+        shift: 'CSP 廠降低 TCO 全面自研 2nm 晶片，UCIe 異質整合 Chiplet IP 授權放量',
+        pe: '32x ~ 45x',
+        catalyst: '自研 ASIC 在雲端算力市佔突破 35%，推論端晶片佔比超越 GPU'
+      },
+      {
+        id: 7,
+        name: '6G 低軌衛星直連手持終端 (D2D)',
+        stocks: '昇達科(3491)、耀登(3138)、台揚(2314)、啟碁(6285)',
+        cagr: '40% ~ 55%',
+        cagrNum: 47.5,
+        shift: '3GPP Rel-19/20 標準底定，低軌衛星 Ka/Q/V 頻段與手機直連寬頻商轉',
+        pe: '25x ~ 38x',
+        catalyst: '智慧型手機與電動車標配衛星直連寬頻通訊，全球新世代衛星密集發射'
+      },
+      {
+        id: 8,
+        name: '邊緣 Edge AI 換機潮 (PC/手機/XR)',
+        stocks: '聯發科(2454)、瑞昱(2379)、義隆(2458)、穩懋(3105)',
+        cagr: '22% ~ 32%',
+        cagrNum: 27,
+        shift: '本地端順暢運行 10B+ 參數 SLM 大模型，NPU 算力標配 100+ TOPS',
+        pe: '18x ~ 25x',
+        catalyst: '企業與消費端迎來 2020 疫情後最大硬體汰換週期，端側 AI Agent 普及'
+      },
+      {
+        id: 9,
+        name: 'SMR 微型核能與智慧微電網 (AI Power)',
+        stocks: '華城(1519)、中興電(1513)、雲豹能源(6869)、台達電(2308)',
+        cagr: '30% ~ 45%',
+        cagrNum: 37.5,
+        shift: '小型模組化核反應爐 (SMR) 就地供電給 AI 機房，BESS 儲能與微電網自動調度',
+        pe: '25x ~ 35x',
+        catalyst: '微軟、亞馬遜、Google 自建或簽約 SMR 電廠啟用，「電力即算力」重塑估值'
+      },
+      {
+        id: 10,
+        name: 'AI 固態電池與次世代車用動力',
+        stocks: '台達電(2308)、貿聯-KY(3665)、康普(4739)、美琪瑪(4721)',
+        cagr: '35% ~ 50%',
+        cagrNum: 42.5,
+        shift: '固態電解質商業化量產，能量密度突破 500 Wh/kg，高壓 800V/1200V SiC',
+        pe: '22x ~ 32x',
+        catalyst: '頂級旗艦電車與 eVTOL 飛行汽車全面搭載固態電池，充放電速率提升 3 倍'
+      }
+    ];
+
+    // Data Store: Paradigm Shift Evolution Rows
+    const evolutionData = [
+      {
+        domain: '散熱架構',
+        now: '3D VC + 單相水冷板 (Cold Plate) + CDU (800~1200W)',
+        next: '雙相浸沒式冷卻 (Two-Phase) + 晶片微通道散熱 (2000W+)',
+        driver: '晶片熱通量超過 1500W 逼近水冷板物理極限；PUE < 1.10 強制法規',
+        stocks: '雙鴻、奇鋐、高力、一詮'
+      },
+      {
+        domain: '傳輸介面',
+        now: '800G / 1.6T 銅纜 (ACC/AEC) + Pluggable 可插拔光模組',
+        next: '3.2T CPO 全光共封裝 + 矽光子晶片間光學互連',
+        driver: '光進銅退：銅訊號集膚效應與衰減無法支援 3.2T，功耗節省 50%',
+        stocks: '訊芯-KY、上詮、聯鈞、光聖'
+      },
+      {
+        domain: '封裝與載板',
+        now: 'CoWoS-L/S + ABF 有機載板 (2.5D 封裝)',
+        next: 'SoIC (3D 無凸塊鍵合) + 玻璃基板 (Glass Substrate)',
+        driver: '晶片面積達 4~6x 光罩尺寸，有機載板翹曲失控；TGV 玻璃通孔高剛性救星',
+        stocks: '欣興、景碩、鈦昇、弘塑、台積電'
+      },
+      {
+        domain: '製程與架構',
+        now: 'N3P / N2 製程 (傳統正面供電與佈線)',
+        next: 'A16 埃米製程 + Super Power Rail (晶背供電 BSPDN)',
+        driver: 'IR Drop 壓降嚴重限制時脈；供電與訊號分離大幅縮小晶片面積與提速',
+        stocks: '台積電、中砂、家登、世芯-KY'
+      },
+      {
+        domain: '終端與能源',
+        now: '大型雲端 AI 機櫃集中訓練 + 傳統高壓電網擴容',
+        next: '具身智能機器人量產 + Edge AI 換機 + SMR 微核能就地供電',
+        driver: 'AI 走出雲端接管實體世界；科技巨頭自建 SMR 突破電網審批瓶頸',
+        stocks: '鴻海、所羅門、上銀、華城、中興電'
+      }
+    ];
+
+    // Data Store: Tier 0 ~ Tier 5 Hierarchy
+    const tierData = [
+      {
+        tier: 'Tier 0',
+        title: '頂層架構、演算法與矽智財 (Architecture & Design)',
+        margin: '55% ~ 95% (極高毛利)',
+        pe: '35x ~ 55x',
+        desc: '科技樹最頂端，提供底層指令集、IP 授權與 ASIC 實體設計委託。邊際成本趨近於零，營運槓桿最大。',
+        stocks: [
+          { name: '力旺 (3529)', tag: 'eNVM 嵌入式記憶體 IP 霸主' },
+          { name: 'M31 (6643)', tag: '高速介面與基礎單元庫 IP' },
+          { name: '世芯-KY (3661)', tag: '美系 CSP 雲端加速晶片主力託管' },
+          { name: '創意 (3443)', tag: '台積電 OIP 核心夥伴 / 2nm ASIC' },
+          { name: '聯發科 (2454)', tag: '天璣邊緣 AI SoC & 車載智慧座艙' }
+        ]
+      },
+      {
+        tier: 'Tier 1',
+        title: '晶圓製造、先進封裝設備與檢測 (Foundry & Packaging)',
+        margin: '40% ~ 58%',
+        pe: '25x ~ 38x',
+        desc: '算力硬體的心臟與產能瓶頸端，掌控全球 3nm/2nm/A16 尖端製程與 CoWoS/SoIC 獨家寡占。',
+        stocks: [
+          { name: '台積電 (2330)', tag: '全球 90%+ 尖端晶圓製造與先進封裝獨霸' },
+          { name: '弘塑 (3131)', tag: 'CoWoS 濕製程單晶圓清洗機台龍頭' },
+          { name: '辛耘 (3583)', tag: '先進封裝濕製程設備與再生晶圓' },
+          { name: '均豪 (5443)', tag: '半導體高精度封裝與檢測聯盟' },
+          { name: '閎康 (3587)', tag: '半導體材料分析 (MA) 亞太龍頭' }
+        ]
+      },
+      {
+        tier: 'Tier 2',
+        title: '光電互連與高速記憶體 (Optical Interconnect & Memory)',
+        margin: '30% ~ 45%',
+        pe: '28x ~ 45x',
+        desc: '突破記憶體牆與傳輸頻寬瓶頸的關鍵節點，涵蓋 1.6T/3.2T CPO 矽光子模組與高頻寬記憶體。',
+        stocks: [
+          { name: '聯鈞 (3450)', tag: '矽光子微光學封裝與高速光模組' },
+          { name: '光聖 (6442)', tag: '美系 CSP 高階光纖跳接線與光模組' },
+          { name: '上詮 (3363)', tag: '台積電 CPO 光纖陣列 (FA) 策略夥伴' },
+          { name: '群聯 (8299)', tag: 'PCIe Gen5/Gen6 控制晶片與 aiDAPTIV+' }
+        ]
+      },
+      {
+        tier: 'Tier 3',
+        title: '關鍵核心次系統、溫控散熱與電力 (Thermal & Subsystems)',
+        margin: '22% ~ 35%',
+        pe: '20x ~ 32x',
+        desc: '高功耗運算下的物理防線。單晶片 TDP 衝破 1500W，水冷板、CDU、高多層 PCB/CCL 迎來價值倍增。',
+        stocks: [
+          { name: '奇鋐 (3017)', tag: '水冷板、CDU 與 3D VC 散熱系統總成' },
+          { name: '雙鴻 (3324)', tag: '水冷散熱模組與浸沒式冷卻先驅' },
+          { name: '金像電 (2368)', tag: 'AI 伺服器高多層板與高階 PCB 龍頭' },
+          { name: '台光電 (2383)', tag: 'M8/M9 超低損耗銅箔基板 (CCL) 霸主' },
+          { name: '台達電 (2308)', tag: '資料中心高壓電源與微電網系統' }
+        ]
+      },
+      {
+        tier: 'Tier 4',
+        title: '系統級 ODM 組裝與機櫃整合 (System Integration)',
+        margin: '6% ~ 12% (高營收規模)',
+        pe: '15x ~ 22x',
+        desc: '將數萬顆運算晶片、液冷管路、電源與網路整合為整機櫃 (NVL72) 交付，具極高資本與物流壁壘。',
+        stocks: [
+          { name: '鴻海 (2317)', tag: '全球最大 AI 伺服器垂直整合代工廠' },
+          { name: '廣達 (2382)', tag: '雲端 CSP AI 伺服器主力出貨商' },
+          { name: '緯穎 (6669)', tag: '純 CSP 雲端伺服器白牌解決方案龍頭' },
+          { name: '緯創 (3231)', tag: 'GPU 運算主板與基板主力代工' }
+        ]
+      },
+      {
+        tier: 'Tier 5',
+        title: '能源基礎設施與實體 AI 終端應用 (Energy & Physical AI)',
+        margin: '20% ~ 38%',
+        pe: '22x ~ 38x',
+        desc: 'AI 算力的物理基礎（電力即算力）與 AI 落地實體世界的終極載體（人形機器人與低軌衛星）。',
+        stocks: [
+          { name: '華城 (1519)', tag: '北美超高壓電力變壓器外銷霸主' },
+          { name: '中興電 (1513)', tag: 'GIS 重電開關與台電強韌電網主力' },
+          { name: '所羅門 (2359)', tag: '輝達合作 3D 機器人視覺演算法' },
+          { name: '廣明/達明 (6188)', tag: '全球協作型機器手臂前三大廠' },
+          { name: '昇達科 (3491)', tag: '低軌衛星高頻毫米波通訊元件龍頭' }
+        ]
+      }
+    ];
+
+    // Tab Switching Function
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(el => {
+        el.classList.remove('bg-emerald-500/10', 'text-emerald-400', 'border-emerald-500/30', 'bg-cyan-500/10', 'text-cyan-400', 'border-cyan-500/30');
+        el.classList.add('text-slate-400');
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) {
+        activeSection.classList.remove('hidden');
+      }
+
+      const activeBtn = document.getElementById('btn-' + tabId);
+      if (activeBtn) {
+        activeBtn.classList.remove('text-slate-400');
+        activeBtn.classList.add('bg-emerald-500/10', 'text-emerald-400', 'border', 'border-emerald-500/30');
+      }
+
+      window.dispatchEvent(new Event('resize'));
+    }
+
+    // Render 2026 Sector Cards
+    function render2026Grid(items) {
+      const container = document.getElementById('grid-2026');
+      if (!container) return;
+      container.innerHTML = items.map(s => `
+        <div class="glass-card rounded-xl p-4 space-y-3 transition-all hover:-translate-y-1 hover:border-emerald-500/50">
+          <div class="flex items-start justify-between gap-2">
+            <div class="flex items-center space-x-2">
+              <span class="w-6 h-6 rounded-md bg-slate-800 text-slate-300 font-mono text-xs flex items-center justify-center font-bold">${s.id}</span>
+              <h4 class="font-bold text-slate-100 text-sm tracking-tight">${s.name}</h4>
+            </div>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+              CAGR +${s.cagrNum}%
+            </span>
+          </div>
+
+          <div class="bg-slate-950/70 p-2 rounded-lg border border-slate-800/80 text-xs">
+            <span class="text-slate-400">代表龍頭：</span>
+            <strong class="text-slate-200 font-mono">${s.stocks}</strong>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-normal line-clamp-2">
+            <span class="text-emerald-400 font-medium">護城河:</span> ${s.moat}
+          </p>
+
+          <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-slate-400">2026F PE: <strong class="text-cyan-400">${s.pe}</strong></span>
+            <span class="text-[11px] text-${s.sentimentColor}-400 font-sans font-medium">${s.sentiment}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Render 2027 Sector Cards
+    function render2027Grid() {
+      const container = document.getElementById('grid-2027');
+      if (!container) return;
+      container.innerHTML = sectors2027.map(s => `
+        <div class="glass-card rounded-xl p-4 space-y-3 transition-all hover:-translate-y-1 hover:border-cyan-500/50">
+          <div class="flex items-start justify-between gap-2">
+            <div class="flex items-center space-x-2">
+              <span class="w-6 h-6 rounded-md bg-cyan-950 text-cyan-300 font-mono text-xs flex items-center justify-center font-bold">${s.id}</span>
+              <h4 class="font-bold text-slate-100 text-sm tracking-tight">${s.name}</h4>
+            </div>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+              CAGR +${s.cagrNum}%
+            </span>
+          </div>
+
+          <div class="bg-slate-950/70 p-2 rounded-lg border border-slate-800/80 text-xs">
+            <span class="text-slate-400">前瞻龍頭：</span>
+            <strong class="text-slate-200 font-mono">${s.stocks}</strong>
+          </div>
+
+          <div class="space-y-1 text-xs">
+            <p class="text-slate-300"><span class="text-cyan-400 font-medium">轉移核心:</span> ${s.shift}</p>
+            <p class="text-slate-400"><span class="text-amber-400 font-medium">爆發催化劑:</span> ${s.catalyst}</p>
+          </div>
+
+          <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono">
+            <span class="text-slate-400">2027F PE: <strong class="text-purple-400">${s.pe}</strong></span>
+            <span class="text-[11px] text-cyan-300 font-sans font-medium">次世代爆發</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Render Evolution Table in Tab 2
+    function renderEvolutionTable() {
+      const tbody = document.getElementById('tbody-evolution');
+      if (!tbody) return;
+      tbody.innerHTML = evolutionData.map(e => `
+        <tr class="hover:bg-slate-800/40 transition-colors">
+          <td class="p-3 font-semibold text-slate-100 font-mono">${e.domain}</td>
+          <td class="p-3 text-emerald-300 bg-emerald-950/10">${e.now}</td>
+          <td class="p-3 text-cyan-300 bg-cyan-950/10 font-medium">${e.next}</td>
+          <td class="p-3 text-slate-300 text-xs">${e.driver}</td>
+          <td class="p-3 text-right font-mono font-medium text-slate-200">${e.stocks}</td>
+        </tr>
+      `).join('');
+    }
+
+    // Render Tier Breakdown Accordion
+    function renderTierBreakdown() {
+      const container = document.getElementById('tier-breakdown-container');
+      if (!container) return;
+      container.innerHTML = tierData.map(t => `
+        <div class="glass-card rounded-xl p-4 space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-2">
+            <div class="flex items-center space-x-2">
+              <span class="px-2 py-0.5 rounded font-mono font-bold text-xs bg-purple-500/20 text-purple-300 border border-purple-500/40">${t.tier}</span>
+              <h4 class="font-bold text-slate-100 text-sm">${t.title}</h4>
+            </div>
+            <div class="flex items-center space-x-3 text-xs font-mono">
+              <span class="text-emerald-400">毛利率: ${t.margin}</span>
+              <span class="text-slate-600">|</span>
+              <span class="text-cyan-400">PE區間: ${t.pe}</span>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">${t.desc}</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 pt-1">
+            ${t.stocks.map(s => `
+              <div class="bg-slate-900/90 border border-slate-800 p-2 rounded-lg">
+                <div class="font-bold text-xs text-slate-200 font-mono">${s.name}</div>
+                <div class="text-[10px] text-slate-400 mt-0.5 line-clamp-1" title="${s.tag}">${s.tag}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Filter Logic for Tab 1
+    let currentCategory2026 = 'all';
+    function filter2026Sectors() {
+      const query = (document.getElementById('search-2026')?.value || '').toLowerCase().trim();
+      const filtered = sectors2026.filter(s => {
+        const matchesCategory = (currentCategory2026 === 'all') || (s.category === currentCategory2026);
+        const matchesQuery = !query || 
+          s.name.toLowerCase().includes(query) || 
+          s.stocks.toLowerCase().includes(query) || 
+          s.moat.toLowerCase().includes(query);
+        return matchesCategory && matchesQuery;
+      });
+      render2026Grid(filtered);
+    }
+
+    function setFilterCategory2026(cat) {
+      currentCategory2026 = cat;
+      document.querySelectorAll('#tag-filters-2026 button').forEach(btn => {
+        btn.classList.remove('bg-emerald-500', 'text-slate-950');
+        btn.classList.add('bg-slate-800', 'text-slate-300');
+      });
+      event.target.classList.remove('bg-slate-800', 'text-slate-300');
+      event.target.classList.add('bg-emerald-500', 'text-slate-950');
+      filter2026Sectors();
+    }
+
+    // DCF Calculator Logic in Tab 4
+    function calculateDCF() {
+      const r = parseFloat(document.getElementById('input-r').value);
+      let g = parseFloat(document.getElementById('input-g').value);
+      const cfGrowth = parseFloat(document.getElementById('input-cf').value);
+
+      if (g >= r) {
+        g = r - 0.5;
+        document.getElementById('input-g').value = g.toFixed(2);
+      }
+
+      document.getElementById('val-r').innerText = r.toFixed(2) + '%';
+      document.getElementById('val-g').innerText = g.toFixed(2) + '%';
+      document.getElementById('val-g-cf').innerText = '+' + cfGrowth.toFixed(1) + '%';
+
+      // Duration: D = (1 + r) / (r - g)
+      const rDec = r / 100;
+      const gDec = g / 100;
+      const duration = (1 + rDec) / (rDec - gDec);
+      const modDuration = duration / (1 + rDec);
+
+      // Price sensitivity to +100bps interest rate
+      const penalty = -modDuration * 1.0; // in %
+      
+      document.getElementById('out-duration').innerText = duration.toFixed(1) + ' 年';
+      document.getElementById('out-penalty').innerText = penalty.toFixed(1) + '%';
+
+      // Net excess return = CashFlow Growth + Penalty
+      const netGain = cfGrowth + penalty;
+      document.getElementById('out-excess').innerText = (netGain >= 0 ? '+' : '') + netGain.toFixed(1) + '%';
+
+      const verdictEl = document.getElementById('out-verdict');
+      if (netGain > 0) {
+        verdictEl.innerText = '✅ 達成戴維斯雙擊條件 (分子增長強勢覆蓋久期折讓)';
+        verdictEl.className = 'text-lg font-bold text-emerald-400 mt-0.5';
+      } else {
+        verdictEl.innerText = '⚠️ 估值受壓警訊 (分子增速無法抵銷利率折讓懲罰)';
+        verdictEl.className = 'text-lg font-bold text-rose-400 mt-0.5';
+      }
+    }
+
+    // Initialize Charts
+    function initCharts() {
+      // 1. Chart 2026 CAGR
+      const ctxCAGR = document.getElementById('chart2026CAGR')?.getContext('2d');
+      if (ctxCAGR) {
+        new Chart(ctxCAGR, {
+          type: 'bar',
+          data: {
+            labels: sectors2026.map(s => s.name.split(' ')[0]),
+            datasets: [{
+              label: '2026 預估 CAGR 中位數 (%)',
+              data: sectors2026.map(s => s.cagrNum),
+              backgroundColor: 'rgba(16, 185, 129, 0.7)',
+              borderColor: '#10b981',
+              borderWidth: 1,
+              borderRadius: 6
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: '#0f172a',
+                titleColor: '#e2e8f0',
+                bodyColor: '#10b981',
+                borderColor: '#334155',
+                borderWidth: 1
+              }
+            },
+            scales: {
+              x: {
+                ticks: { color: '#94a3b8', font: { size: 10 } },
+                grid: { display: false }
+              },
+              y: {
+                ticks: { color: '#94a3b8', font: { size: 10 } },
+                grid: { color: 'rgba(51, 65, 85, 0.3)' }
+              }
+            }
+          }
+        });
+      }
+
+      // 2. Chart 2026 Allocation Donut
+      const ctxAlloc = document.getElementById('chart2026Allocation')?.getContext('2d');
+      if (ctxAlloc) {
+        new Chart(ctxAlloc, {
+          type: 'doughnut',
+          data: {
+            labels: ['CoWoS/晶圓先進製程 (30%)', 'AI 伺服器 & 機櫃 (25%)', '水冷散熱 CDU (15%)', '光模組/CPO (15%)', '重電/機器人/ASIC (15%)'],
+            datasets: [{
+              data: [30, 25, 15, 15, 15],
+              backgroundColor: ['#10b981', '#06b6d4', '#f59e0b', '#a855f7', '#3b82f6'],
+              borderWidth: 0
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: 'right',
+                labels: { color: '#cbd5e1', font: { size: 10 }, boxWidth: 12 }
+              }
+            },
+            cutout: '70%'
+          }
+        });
+      }
+
+      // 3. Chart 2026 vs 2027 CAGR Comparison
+      const ctxComp = document.getElementById('chartCAGRComparison')?.getContext('2d');
+      if (ctxComp) {
+        const topLabels = ['CPO光互連', '先進封裝/基板', '散熱冷卻', '機器人/實體AI', '客製化ASIC', '晶圓埃米製程'];
+        const data2026 = [42.5, 44.0, 47.5, 26.0, 35.0, 32.0];
+        const data2027 = [72.5, 62.5, 55.0, 67.5, 41.5, 33.0];
+
+        new Chart(ctxComp, {
+          type: 'bar',
+          data: {
+            labels: topLabels,
+            datasets: [
+              {
+                label: '2026 預估 CAGR (%)',
+                data: data2026,
+                backgroundColor: 'rgba(16, 185, 129, 0.65)',
+                borderRadius: 4
+              },
+              {
+                label: '2027 前瞻 CAGR (%)',
+                data: data2027,
+                backgroundColor: 'rgba(6, 182, 212, 0.85)',
+                borderRadius: 4
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                labels: { color: '#cbd5e1', font: { size: 11 } }
+              },
+              tooltip: {
+                backgroundColor: '#0f172a',
+                borderColor: '#334155',
+                borderWidth: 1
+              }
+            },
+            scales: {
+              x: { ticks: { color: '#94a3b8' }, grid: { display: false } },
+              y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51, 65, 85, 0.3)' } }
+            }
+          }
+        });
+      }
+
+      // 4. Chart Smiling Curve
+      const ctxSmile = document.getElementById('chartSmilingCurve')?.getContext('2d');
+      if (ctxSmile) {
+        new Chart(ctxSmile, {
+          type: 'line',
+          data: {
+            labels: ['Tier 0 (IP/設計)', 'Tier 1 (台積電/封裝)', 'Tier 2 (光電/記憶體)', 'Tier 3 (散熱/PCB)', 'Tier 4 (ODM組裝)', 'Tier 5 (重電/機器人)'],
+            datasets: [{
+              label: '平均毛利率區間中樞 (%)',
+              data: [75, 52, 38, 28, 9, 32],
+              borderColor: '#10b981',
+              backgroundColor: 'rgba(16, 185, 129, 0.15)',
+              fill: true,
+              tension: 0.45,
+              pointRadius: 6,
+              pointBackgroundColor: ['#a855f7', '#10b981', '#06b6d4', '#f59e0b', '#ef4444', '#10b981'],
+              borderWidth: 3
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return ' 毛利率中樞: ' + context.parsed.y + '%';
+                  }
+                }
+              }
+            },
+            scales: {
+              x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { display: false } },
+              y: { 
+                ticks: { color: '#94a3b8', callback: v => v + '%' },
+                grid: { color: 'rgba(51, 65, 85, 0.3)' },
+                min: 0,
+                max: 90
+              }
+            }
+          }
+        });
+      }
+    }
+
+    // Run on Page Load
+    document.addEventListener('DOMContentLoaded', () => {
+      render2026Grid(sectors2026);
+      render2027Grid();
+      renderEvolutionTable();
+      renderTierBreakdown();
+      calculateDCF();
+      initCharts();
+
+      // Initialize Mermaid
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'dark',
+        themeVariables: {
+          darkMode: true,
+          background: '#090d16',
+          primaryColor: '#10b981',
+          primaryTextColor: '#fff',
+          primaryBorderColor: '#334155',
+          lineColor: '#64748b',
+          secondaryColor: '#06b6d4',
+          tertiaryColor: '#1e293b'
+        }
+      });
+    });
+  </script>
+</body>
+</html>
