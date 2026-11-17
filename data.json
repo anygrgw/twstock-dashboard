@@ -1,525 +1,525 @@
 {
  "count": 51,
- "dataDateLatest": "115/11/16",
- "dataDateOldest": "115/11/13",
- "fetchedAt": "2026-11-17 01:27:25+0800",
+ "dataDateLatest": "115/11/17",
+ "dataDateOldest": "115/11/16",
+ "fetchedAt": "2026-11-18 01:04:09+0800",
  "index": {
-  "date": "20261116",
-  "value": 41040.08
+  "date": "20261117",
+  "value": 40092.11
  },
- "peMedian": 30.86,
+ "peMedian": 27.7,
  "source": "TWSE BWIBBU_ALL / STOCK_DAY_ALL；TPEx peratio_analysis / daily_close_quotes",
  "stocks": {
   "1503": {
-   "close": 170.0,
-   "closeDate": "1151113",
+   "close": 164.0,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "士電",
-   "pb": 2.29,
-   "pe": 23.42,
-   "peDate": "1151113",
-   "yield": 2.94
+   "pb": 2.21,
+   "pe": 21.72,
+   "peDate": "1151116",
+   "yield": 3.05
   },
   "1513": {
-   "close": 146.5,
-   "closeDate": "1151113",
+   "close": 141.0,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "中興電",
-   "pb": 3.31,
-   "pe": 15.92,
-   "peDate": "1151113",
-   "yield": 4.1
+   "pb": 3.19,
+   "pe": 15.33,
+   "peDate": "1151116",
+   "yield": 4.26
   },
   "1514": {
-   "close": 84.7,
-   "closeDate": "1151113",
+   "close": 80.0,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "亞力",
-   "pb": 3.61,
-   "pe": 23.99,
-   "peDate": "1151113",
-   "yield": 2.6
+   "pb": 3.41,
+   "pe": 22.66,
+   "peDate": "1151116",
+   "yield": 2.75
   },
   "1519": {
-   "close": 505.0,
-   "closeDate": "1151113",
+   "close": 483.5,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "華城",
-   "pb": 16.59,
-   "pe": 32.98,
-   "peDate": "1151113",
-   "yield": 2.38
+   "pb": 15.88,
+   "pe": 31.58,
+   "peDate": "1151116",
+   "yield": 2.48
   },
   "1560": {
-   "close": 726.0,
-   "closeDate": "1151113",
+   "close": 654.0,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "中砂",
-   "pb": 10.58,
-   "pe": 54.34,
-   "peDate": "1151113",
-   "yield": 0.68
+   "pb": 9.53,
+   "pe": 48.95,
+   "peDate": "1151116",
+   "yield": 0.76
   },
   "2027": {
-   "close": 44.5,
-   "closeDate": "1151113",
+   "close": 45.0,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "大成鋼",
-   "pb": 1.24,
-   "pe": 7.71,
-   "peDate": "1151113",
-   "yield": 3.37
+   "pb": 1.26,
+   "pe": 7.8,
+   "peDate": "1151116",
+   "yield": 3.33
   },
   "2049": {
-   "close": 314.0,
-   "closeDate": "1151113",
+   "close": 289.0,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "上銀",
-   "pb": 2.74,
-   "pe": 35.6,
-   "peDate": "1151113",
-   "yield": 0.64
-  },
-  "2317": {
-   "close": 241.0,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "鴻海",
-   "pb": 1.77,
-   "pe": 15.89,
-   "peDate": "1151113",
-   "yield": 2.98
-  },
-  "2330": {
-   "close": 2350.0,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "台積電",
-   "pb": 8.71,
-   "pe": 23.92,
-   "peDate": "1151113",
-   "yield": 0.94
-  },
-  "2359": {
-   "close": 98.2,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "所羅門",
-   "pb": 2.6,
-   "pe": 16.26,
-   "peDate": "1151113",
-   "yield": 1.02
-  },
-  "2368": {
-   "close": 1030.0,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "金像電",
-   "pb": 10.17,
-   "pe": 30.88,
-   "peDate": "1151113",
-   "yield": 0.95
-  },
-  "2382": {
-   "close": 276.5,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "廣達",
-   "pb": 3.29,
-   "pe": 11.28,
-   "peDate": "1151113",
-   "yield": 5.64
-  },
-  "2383": {
-   "close": 4215.0,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "台光電",
-   "pb": 20.56,
-   "pe": 45.15,
-   "peDate": "1151113",
-   "yield": 0.59
-  },
-  "2454": {
-   "close": 4120.0,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "聯發科",
-   "pb": 14.14,
-   "pe": 66.27,
-   "peDate": "1151113",
-   "yield": 1.3
-  },
-  "2486": {
-   "close": 170.0,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "一詮",
-   "pb": 6.27,
-   "pe": 104.94,
-   "peDate": "1151113",
-   "yield": 0.29
-  },
-  "3013": {
-   "close": 75.5,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "晟銘電",
-   "pb": 2.66,
-   "pe": 13.2,
-   "peDate": "1151113",
-   "yield": 1.06
-  },
-  "3017": {
-   "close": 3040.0,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "奇鋐",
-   "pb": 17.83,
-   "pe": 33.61,
-   "peDate": "1151113",
+   "pb": 2.52,
+   "pe": 32.77,
+   "peDate": "1151116",
    "yield": 0.69
   },
-  "3035": {
-   "close": 196.0,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "智原",
-   "pb": 2.83,
-   "pe": 64.69,
-   "peDate": "1151113",
-   "yield": 0.92
-  },
-  "3037": {
-   "close": 785.0,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "欣興",
-   "pb": 7.25,
-   "pe": 40.63,
-   "peDate": "1151113",
-   "yield": 0.25
-  },
-  "3044": {
-   "close": 533.0,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "健鼎",
-   "pb": 4.5,
-   "pe": 17.97,
-   "peDate": "1151113",
-   "yield": 2.38
-  },
-  "3131": {
-   "close": 1565.0,
+  "2317": {
+   "close": 218.5,
    "closeDate": "1151116",
-   "market": "上櫃",
-   "name": "弘塑",
-   "pb": 10.18,
-   "pe": 26.88,
+   "market": "上市",
+   "name": "鴻海",
+   "pb": 1.55,
+   "pe": 13.22,
    "peDate": "1151116",
-   "yield": 2.94
+   "yield": 3.28
   },
-  "3163": {
-   "close": 455.5,
+  "2330": {
+   "close": 2215.0,
    "closeDate": "1151116",
-   "market": "上櫃",
-   "name": "波若威",
-   "pb": 12.58,
-   "pe": 61.55,
+   "market": "上市",
+   "name": "台積電",
+   "pb": 8.21,
+   "pe": 22.54,
    "peDate": "1151116",
-   "yield": 0.77
+   "yield": 0.99
   },
-  "3189": {
-   "close": 668.0,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "景碩",
-   "pb": 7.5,
-   "pe": 71.98,
-   "peDate": "1151113",
-   "yield": 0.23
-  },
-  "3231": {
-   "close": 171.0,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "緯創",
-   "pb": 2.2,
-   "pe": 11.49,
-   "peDate": "1151113",
-   "yield": 3.22
-  },
-  "3324": {
-   "close": 1030.0,
+  "2359": {
+   "close": 88.6,
    "closeDate": "1151116",
-   "market": "上櫃",
-   "name": "雙鴻",
-   "pb": 6.45,
-   "pe": 23.15,
+   "market": "上市",
+   "name": "所羅門",
+   "pb": 2.35,
+   "pe": 14.67,
+   "peDate": "1151116",
+   "yield": 1.13
+  },
+  "2368": {
+   "close": 927.0,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "金像電",
+   "pb": 9.15,
+   "pe": 27.8,
+   "peDate": "1151116",
+   "yield": 1.06
+  },
+  "2382": {
+   "close": 264.5,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "廣達",
+   "pb": 3.15,
+   "pe": 10.79,
+   "peDate": "1151116",
+   "yield": 5.9
+  },
+  "2383": {
+   "close": 3795.0,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "台光電",
+   "pb": 18.51,
+   "pe": 40.65,
+   "peDate": "1151116",
+   "yield": 0.66
+  },
+  "2454": {
+   "close": 3795.0,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "聯發科",
+   "pb": 13.02,
+   "pe": 61.04,
+   "peDate": "1151116",
+   "yield": 1.41
+  },
+  "2486": {
+   "close": 153.0,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "一詮",
+   "pb": 5.64,
+   "pe": 94.44,
+   "peDate": "1151116",
+   "yield": 0.33
+  },
+  "3013": {
+   "close": 69.1,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "晟銘電",
+   "pb": 2.44,
+   "pe": 12.08,
    "peDate": "1151116",
    "yield": 1.16
   },
+  "3017": {
+   "close": 2740.0,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "奇鋐",
+   "pb": 16.07,
+   "pe": 30.29,
+   "peDate": "1151116",
+   "yield": 0.76
+  },
+  "3035": {
+   "close": 186.5,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "智原",
+   "pb": 2.7,
+   "pe": 61.55,
+   "peDate": "1151116",
+   "yield": 0.97
+  },
+  "3037": {
+   "close": 707.0,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "欣興",
+   "pb": 6.53,
+   "pe": 36.59,
+   "peDate": "1151116",
+   "yield": 0.28
+  },
+  "3044": {
+   "close": 480.0,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "健鼎",
+   "pb": 4.05,
+   "pe": 16.18,
+   "peDate": "1151116",
+   "yield": 2.65
+  },
+  "3131": {
+   "close": 1475.0,
+   "closeDate": "1151117",
+   "market": "上櫃",
+   "name": "弘塑",
+   "pb": 9.59,
+   "pe": 25.33,
+   "peDate": "1151117",
+   "yield": 3.12
+  },
+  "3163": {
+   "close": 414.0,
+   "closeDate": "1151117",
+   "market": "上櫃",
+   "name": "波若威",
+   "pb": 11.43,
+   "pe": 55.95,
+   "peDate": "1151117",
+   "yield": 0.85
+  },
+  "3189": {
+   "close": 602.0,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "景碩",
+   "pb": 6.76,
+   "pe": 64.87,
+   "peDate": "1151116",
+   "yield": 0.25
+  },
+  "3231": {
+   "close": 159.0,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "緯創",
+   "pb": 2.05,
+   "pe": 10.69,
+   "peDate": "1151116",
+   "yield": 3.46
+  },
+  "3324": {
+   "close": 927.0,
+   "closeDate": "1151117",
+   "market": "上櫃",
+   "name": "雙鴻",
+   "pb": 5.8,
+   "pe": 20.83,
+   "peDate": "1151117",
+   "yield": 1.28
+  },
   "3443": {
-   "close": 8610.0,
-   "closeDate": "1151113",
+   "close": 7750.0,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "創意",
-   "pb": 73.35,
-   "pe": 173.94,
-   "peDate": "1151113",
-   "yield": 0.23
+   "pb": 66.02,
+   "pe": 156.57,
+   "peDate": "1151116",
+   "yield": 0.26
   },
   "3450": {
-   "close": 365.0,
-   "closeDate": "1151113",
+   "close": 328.5,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "聯鈞",
-   "pb": 8.79,
-   "pe": 49.46,
-   "peDate": "1151113",
-   "yield": 0.27
+   "pb": 7.91,
+   "pe": 44.51,
+   "peDate": "1151116",
+   "yield": 0.3
   },
   "3491": {
-   "close": 1405.0,
-   "closeDate": "1151116",
+   "close": 1445.0,
+   "closeDate": "1151117",
    "market": "上櫃",
    "name": "昇達科",
-   "pb": 20.61,
-   "pe": 94.11,
+   "pb": 21.2,
+   "pe": 96.78,
+   "peDate": "1151117",
+   "yield": 0.47
+  },
+  "3529": {
+   "close": 2180.0,
+   "closeDate": "1151117",
+   "market": "上櫃",
+   "name": "力旺",
+   "pb": 39.44,
+   "pe": 68.47,
+   "peDate": "1151117",
+   "yield": 0.94
+  },
+  "3583": {
+   "close": 453.0,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "辛耘",
+   "pb": 3.5,
+   "pe": 25.18,
+   "peDate": "1151116",
+   "yield": 1.27
+  },
+  "3587": {
+   "close": 171.0,
+   "closeDate": "1151117",
+   "market": "上櫃",
+   "name": "閎康",
+   "pb": 1.96,
+   "pe": 20.75,
+   "peDate": "1151117",
+   "yield": 2.46
+  },
+  "3661": {
+   "close": 3660.0,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "世芯-KY",
+   "pb": 4.96,
+   "pe": 40.51,
+   "peDate": "1151116",
+   "yield": 0.89
+  },
+  "3680": {
+   "close": 356.0,
+   "closeDate": "1151117",
+   "market": "上櫃",
+   "name": "家登",
+   "pb": 2.72,
+   "pe": 20.06,
+   "peDate": "1151117",
+   "yield": 1.94
+  },
+  "4585": {
+   "close": 200.0,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "達明",
+   "pb": 2.96,
+   "pe": 62.31,
+   "peDate": "1151116",
+   "yield": 0.5
+  },
+  "4916": {
+   "close": 104.5,
+   "closeDate": "1151116",
+   "market": "上市",
+   "name": "事欣科",
+   "pb": 3.41,
+   "pe": 13.75,
    "peDate": "1151116",
    "yield": 0.48
   },
-  "3529": {
-   "close": 2150.0,
-   "closeDate": "1151116",
-   "market": "上櫃",
-   "name": "力旺",
-   "pb": 38.9,
-   "pe": 67.53,
-   "peDate": "1151116",
-   "yield": 0.95
-  },
-  "3583": {
-   "close": 503.0,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "辛耘",
-   "pb": 4.14,
-   "pe": 30.86,
-   "peDate": "1151113",
-   "yield": 1.14
-  },
-  "3587": {
-   "close": 176.5,
-   "closeDate": "1151116",
-   "market": "上櫃",
-   "name": "閎康",
-   "pb": 2.02,
-   "pe": 21.42,
-   "peDate": "1151116",
-   "yield": 2.38
-  },
-  "3661": {
-   "close": 4020.0,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "世芯-KY",
-   "pb": 5.45,
-   "pe": 44.5,
-   "peDate": "1151113",
-   "yield": 0.81
-  },
-  "3680": {
-   "close": 375.5,
-   "closeDate": "1151116",
-   "market": "上櫃",
-   "name": "家登",
-   "pb": 2.87,
-   "pe": 21.15,
-   "peDate": "1151116",
-   "yield": 1.84
-  },
-  "4585": {
-   "close": 213.5,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "達明",
-   "pb": 3.16,
-   "pe": 66.51,
-   "peDate": "1151113",
-   "yield": 0.47
-  },
-  "4916": {
-   "close": 112.5,
-   "closeDate": "1151113",
-   "market": "上市",
-   "name": "事欣科",
-   "pb": 3.86,
-   "pe": 17.23,
-   "peDate": "1151113",
-   "yield": 0.44
-  },
   "4938": {
-   "close": 89.1,
-   "closeDate": "1151113",
+   "close": 85.7,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "和碩",
-   "pb": 1.08,
-   "pe": 15.58,
-   "peDate": "1151113",
-   "yield": 4.5
+   "pb": 1.04,
+   "pe": 14.98,
+   "peDate": "1151116",
+   "yield": 4.68
   },
   "4966": {
-   "close": 395.0,
-   "closeDate": "1151116",
+   "close": 391.5,
+   "closeDate": "1151117",
    "market": "上櫃",
    "name": "譜瑞-KY",
-   "pb": 1.33,
-   "pe": 13.81,
-   "peDate": "1151116",
-   "yield": 4.5
+   "pb": 1.32,
+   "pe": 13.69,
+   "peDate": "1151117",
+   "yield": 4.54
   },
   "4979": {
-   "close": 341.5,
-   "closeDate": "1151116",
+   "close": 318.5,
+   "closeDate": "1151117",
    "market": "上櫃",
    "name": "華星光",
-   "pb": 10.19,
-   "pe": 49.85,
-   "peDate": "1151116",
-   "yield": 0.63
+   "pb": 9.5,
+   "pe": 46.5,
+   "peDate": "1151117",
+   "yield": 0.68
   },
   "5269": {
-   "close": 1165.0,
-   "closeDate": "1151113",
+   "close": 1090.0,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "祥碩",
-   "pb": 2.22,
-   "pe": 11.77,
-   "peDate": "1151113",
-   "yield": 3.9
+   "pb": 2.08,
+   "pe": 11.01,
+   "peDate": "1151116",
+   "yield": 4.16
   },
   "5274": {
-   "close": 10800.0,
-   "closeDate": "1151116",
+   "close": 9875.0,
+   "closeDate": "1151117",
    "market": "上櫃",
    "name": "信驊",
-   "pb": 45.39,
-   "pe": 69.58,
-   "peDate": "1151116",
-   "yield": 0.75
+   "pb": 41.5,
+   "pe": 63.62,
+   "peDate": "1151117",
+   "yield": 0.82
   },
   "6104": {
-   "close": 75.4,
-   "closeDate": "1151116",
+   "close": 72.3,
+   "closeDate": "1151117",
    "market": "上櫃",
    "name": "創惟",
-   "pb": 3.07,
-   "pe": 15.97,
-   "peDate": "1151116",
-   "yield": 5.97
+   "pb": 2.95,
+   "pe": 15.32,
+   "peDate": "1151117",
+   "yield": 6.22
   },
   "6187": {
-   "close": 858.0,
-   "closeDate": "1151116",
+   "close": 773.0,
+   "closeDate": "1151117",
    "market": "上櫃",
    "name": "萬潤",
-   "pb": 7.75,
-   "pe": 36.67,
-   "peDate": "1151116",
-   "yield": 1.36
+   "pb": 6.98,
+   "pe": 33.03,
+   "peDate": "1151117",
+   "yield": 1.51
   },
   "6188": {
-   "close": 46.5,
-   "closeDate": "1151116",
+   "close": 45.65,
+   "closeDate": "1151117",
    "market": "上櫃",
    "name": "廣明",
-   "pb": 1.02,
-   "pe": 19.87,
-   "peDate": "1151116",
-   "yield": 6.88
+   "pb": 1.0,
+   "pe": 19.51,
+   "peDate": "1151117",
+   "yield": 7.01
   },
   "6223": {
-   "close": 4305.0,
-   "closeDate": "1151116",
+   "close": 3995.0,
+   "closeDate": "1151117",
    "market": "上櫃",
    "name": "旺矽",
-   "pb": 23.21,
-   "pe": 75.61,
-   "peDate": "1151116",
-   "yield": 0.51
+   "pb": 21.54,
+   "pe": 70.16,
+   "peDate": "1151117",
+   "yield": 0.55
   },
   "6274": {
-   "close": 877.0,
-   "closeDate": "1151116",
+   "close": 790.0,
+   "closeDate": "1151117",
    "market": "上櫃",
    "name": "台燿",
-   "pb": 9.34,
-   "pe": 30.75,
-   "peDate": "1151116",
-   "yield": 0.86
+   "pb": 8.41,
+   "pe": 27.7,
+   "peDate": "1151117",
+   "yield": 0.95
   },
   "6285": {
-   "close": 193.5,
-   "closeDate": "1151113",
+   "close": 179.0,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "啟碁",
-   "pb": 2.41,
-   "pe": 16.02,
-   "peDate": "1151113",
-   "yield": 2.22
+   "pb": 2.23,
+   "pe": 14.82,
+   "peDate": "1151116",
+   "yield": 2.4
   },
   "6442": {
-   "close": 1160.0,
-   "closeDate": "1151113",
+   "close": 1045.0,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "光聖",
-   "pb": 6.14,
-   "pe": 27.01,
-   "peDate": "1151113",
-   "yield": 0.97
+   "pb": 5.53,
+   "pe": 24.33,
+   "peDate": "1151116",
+   "yield": 1.08
   },
   "6451": {
-   "close": 285.0,
-   "closeDate": "1151113",
+   "close": 256.5,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "訊芯-KY",
-   "pb": 3.48,
-   "pe": 1425.0,
-   "peDate": "1151113",
-   "yield": 0.08
+   "pb": 3.13,
+   "pe": 1282.5,
+   "peDate": "1151116",
+   "yield": 0.09
   },
   "6643": {
-   "close": 379.0,
-   "closeDate": "1151116",
+   "close": 370.0,
+   "closeDate": "1151117",
    "market": "上櫃",
    "name": "M31",
-   "pb": 7.75,
-   "pe": 259.59,
-   "peDate": "1151116",
-   "yield": 0.31
+   "pb": 7.56,
+   "pe": 253.42,
+   "peDate": "1151117",
+   "yield": 0.32
   },
   "6669": {
-   "close": 1635.0,
-   "closeDate": "1151113",
+   "close": 1515.0,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "緯穎",
-   "pb": 5.08,
-   "pe": 14.42,
-   "peDate": "1151113",
-   "yield": 10.04
+   "pb": 4.71,
+   "pe": 13.36,
+   "peDate": "1151116",
+   "yield": 10.84
   },
   "8996": {
-   "close": 1440.0,
-   "closeDate": "1151113",
+   "close": 1300.0,
+   "closeDate": "1151116",
    "market": "上市",
    "name": "高力",
-   "pb": 23.78,
-   "pe": 81.17,
-   "peDate": "1151113",
-   "yield": 0.32
+   "pb": 21.47,
+   "pe": 73.28,
+   "peDate": "1151116",
+   "yield": 0.35
   }
  },
- "updatedRoc": "115/11/13"
+ "updatedRoc": "115/11/16"
 }
